@@ -168,11 +168,11 @@ func File(fset *token.FileSet, file *ast.File, opts Options) {
 
 // Multiline nodes which could easily fit on a single line under this many bytes
 // may be collapsed onto a single line.
-const shortLineLimit = 60
+const shortLineLimit = 100
 
 // Single-line nodes which take over this many bytes, and could easily be split
 // into two lines of at least its minSplitFactor factor, may be split.
-const longLineLimit = 100
+const longLineLimit = 160
 
 var rxOctalInteger = regexp.MustCompile(`\A0[0-7_]+\z`)
 
